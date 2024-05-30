@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karaokê</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Karaokê Web</h1>
+
+    <div class="busca">
+        <input type="text" id="nomeVideo" placeholder="Digite o número da canção...">
+        <button onclick="buscarVideo()">Buscar</button>
+    </div>
+    <div id="containerVideo">
+        <video id="meuVideo" controls></video>
+    </div>
+    <div class="error"></div>
+
+    <footer>Criado por Douglas Taylor.</footer>
+    <script src="script.js"></script>
+</body>
+</html>
