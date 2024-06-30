@@ -44,26 +44,33 @@ function buscarVideo() {
         
         document.querySelector('.modal-content').style.display = 'flex'
 
-        if (nota >= 85 || nota <= 90) {    
-            modal.innerHTML = `<div class="modal-content--titulo"><h2>Muito Bem!</h2></div>
-            <div class="modal-content--texto">Você tirou</div>
-            <div class="modal-content--pontos"><${nota}></div>
-            <div class="modal-content--texto"><p>pontos!</p></div>`
-        } else if (nota >= 91 || nota <= 95) {
-            modal.innerHTML = `<div class="modal-content--titulo"><h2>Arrasou!</h2></div>
-            <div class="modal-content--texto">Você tirou</div>
-            <div class="modal-content--pontos"><${nota}></div>
-            <div class="modal-content--texto"><p>pontos!</p></div>`
-        } else if (nota >= 96 || nota <= 99) {
-            modal.innerHTML = `<div class="modal-content--titulo"><h2>Você é um(a) Cantor(a) Profissional!</h2></div>
-            <div class="modal-content--texto">Você tirou</div>
-            <div class="modal-content--pontos"><${nota}></div>
-            <div class="modal-content--texto"><p>pontos!</p></div>`
+        if (nota >= 85 && nota <= 90) {    
+            setTimeout(() => {
+                modal.innerHTML = `<div class="modal-content--titulo"><h2>Muito Bem! 😊</h2></div>
+                <div class="modal-content--texto">Você tirou</div>
+                <div class="modal-content--pontos">${nota}</div>
+                <div class="modal-content--texto"><p>pontos!</p></div>`
+            }, 600);
+        } else if (nota >= 91 && nota <= 95) {
+            setTimeout(() => {
+                modal.innerHTML = `<div class="modal-content--titulo"><h2>Arrasou! 😁</h2></div>
+                <div class="modal-content--texto">Você tirou</div>
+                <div class="modal-content--pontos">${nota}</div>
+                <div class="modal-content--texto"><p>pontos!</p></div>`
+            }, 600);
+            
+        } else {
+            setTimeout(() => {
+                modal.innerHTML = `<div class="modal-content--titulo"><h2>Você é Profissional? 🤩</h2></div>
+                <div class="modal-content--texto">Você tirou</div>
+                <div class="modal-content--pontos">${nota}</div>
+                <div class="modal-content--texto"><p>pontos!</p></div>`
+            }, 600);
         }
-
+        
         setTimeout(() => {
             document.querySelector('.modal-content').style.display = 'none'
             window.location.href = 'index.html'
-        }, 5000)
+        }, 6000)
     }
 }
