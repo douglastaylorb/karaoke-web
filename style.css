@@ -99,6 +99,38 @@ body h1 {
     height: 100%;
 }
 
+.modal {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+.modal-content {
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    width: 50%;
+    height: 70%;
+    background-color: rgba(0, 0, 0, 0.95);
+    text-align: center;
+}
+
+.modal-content--titulo {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.modal-content--pontos {
+    font-size: 70px;
+}
+.modal-content--texto {
+    font-size: 20px;
+}
+
 @media (max-width: 425px) {
 
     body h1 {
